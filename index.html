@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Julie — Frontend Developer & UI Designer. Designing structured, thoughtful interfaces where clarity is the primary aesthetic." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0d0d12" />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Julie — Frontend Developer & UI Designer" />
+  <meta property="og:description" content="Designing structured, thoughtful interfaces where clarity is the primary aesthetic." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="assets/images/og-cover.jpg" />
+
+  <title>Julie — Frontend Developer & UI Designer</title>
+
+  <!-- Font preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!--
+    Type system (strictly 3 families):
+    · Playfair Display → editorial serif, h1–h2, blockquote, italics
+    · Lato             → body text, readable, neutral
+    · IBM Plex Mono    → UI labels, meta, code, monospace identity
+  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Critical: swap class before first paint, no FOUC -->
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+
+  <!-- Skip link — keyboard users bypass nav -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+
+    <nav class="nav" aria-label="Primary navigation">
+
+      <!-- Wordmark -->
+      <a class="nav__mark" href="#home" aria-label="Julie — scroll to top">
+        <span class="nav__mark-text">julie</span><span class="nav__mark-dot" aria-hidden="true">.</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__list" role="list">
+        <li><a class="nav__link" href="#home"     data-section="home">Home</a></li>
+        <li><a class="nav__link" href="#about"    data-section="about">About</a></li>
+        <li><a class="nav__link" href="#skills"   data-section="skills">Skills</a></li>
+        <li><a class="nav__link" href="#projects" data-section="projects">Projects</a></li>
+        <li><a class="nav__link" href="#contact"  data-section="contact">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button
+        class="nav__burger"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-haspopup="dialog"
+      >
+        <span class="burger__bar" aria-hidden="true"></span>
+        <span class="burger__bar" aria-hidden="true"></span>
+        <span class="burger__bar" aria-hidden="true"></span>
+      </button>
+
+    </nav>
+
+    <!-- Mobile panel -->
+    <div
+      class="mobile-nav"
+      id="mobile-nav"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site navigation"
+      aria-hidden="true"
+    >
+      <nav aria-label="Mobile navigation links">
+        <ul class="mobile-nav__list" role="list">
+          <li><a class="mobile-nav__link" href="#home"     data-section="home">Home</a></li>
+          <li><a class="mobile-nav__link" href="#about"    data-section="about">About</a></li>
+          <li><a class="mobile-nav__link" href="#skills"   data-section="skills">Skills</a></li>
+          <li><a class="mobile-nav__link" href="#projects" data-section="projects">Projects</a></li>
+          <li><a class="mobile-nav__link" href="#contact"  data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN
+  ══════════════════════════════════════════════════════════ -->
+  <main id="main">
+
+
+    <!-- ── § HERO ─────────────────────────────────────────────── -->
+    <section id="home" class="section hero" aria-labelledby="hero-name">
+
+      <!-- Vertical ambient line -->
+      <div class="hero__ambient-line" aria-hidden="true"></div>
+
+      <div class="hero__layout container">
+
+        <!-- Column A: Identity -->
+        <div class="hero__copy">
+
+          <p class="hero__status reveal" aria-label="Availability: open to work">
+            <span class="status__pulse" aria-hidden="true"></span>
+            Open to work
+          </p>
+
+          <h1 class="hero__name reveal" id="hero-name">
+            Julie
+          </h1>
+
+          <p class="hero__role reveal">
+            Frontend Developer &amp; UI Designer
+          </p>
+
+          <blockquote class="hero__quote reveal" cite="#">
+            <p>
+              Designing structured,<br />
+              thoughtful interfaces<br />
+              where clarity is the<br />
+              primary aesthetic.
+            </p>
+          </blockquote>
+
+          <div class="hero__cta reveal" role="group" aria-label="Call to action">
+            <a class="btn btn-primary" href="#projects">
+              View Work
+              <svg class="btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="10" x2="17" y2="10"/>
+                <polyline points="11 4 17 10 11 16"/>
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="assets/resume.pdf" download aria-label="Download Julie's resume PDF">
+              <svg class="btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 13.5l-5-5 1.4-1.4 2.6 2.6V3h2v6.7l2.6-2.6L15 8.5l-5 5zM3 17v-3h2v1h10v-1h2v3H3z"/>
+              </svg>
+              Resume
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Column B: Portrait -->
+        <figure class="hero__portrait reveal" aria-label="Editorial portrait of Julie">
+          <div class="portrait__frame">
+            <!--
+              PERSONALIZE: Replace placeholder with your photo:
+              <img
+                class="portrait__img"
+                src="assets/images/julie.jpg"
+                alt="Julie — Frontend Developer and UI Designer"
+                width="400"
+                height="500"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              />
+            -->
+            <div class="portrait__placeholder" role="img" aria-label="Profile photo — replace with your image">
+              <span class="portrait__initial" aria-hidden="true">J</span>
+            </div>
+          </div>
+          <!-- Corner mark — editorial signature detail -->
+          <div class="portrait__corner" aria-hidden="true"></div>
+        </figure>
+
+      </div><!-- /hero__layout -->
+
+      <!-- Issue-line: magazine footer detail -->
+      <div class="hero__issueline container" aria-hidden="true">
+        <span>UI · Systems · Accessibility</span>
+        <span class="issueline__sep">—</span>
+        <span>Hyderabad, India</span>
+        <span class="issueline__sep">—</span>
+        <span>Est. 2020</span>
+      </div>
+
+    </section>
+
+
+    <!-- ── § ABOUT ────────────────────────────────────────────── -->
+    <section id="about" class="section about" aria-labelledby="about-heading">
+      <div class="container">
+
+        <div class="about__grid">
+
+          <!-- Vertical label (magazine column marker) -->
+          <div class="about__marker" aria-hidden="true">
+            <span class="marker__label">01 / About</span>
+          </div>
+
+          <!-- Content -->
+          <div class="about__body">
+
+            <h2 id="about-heading" class="section-title reveal">
+              Precision<br />in design.<br />
+              <em>Clarity in code.</em>
+            </h2>
+
+            <div class="about__prose reveal">
+              <p>
+                I work at the intersection where aesthetic judgment
+                meets engineering discipline. For me, a well-structured
+                stylesheet and a well-reasoned layout carry equal weight.
+              </p>
+              <p>
+                My interfaces are defined by what's absent as much as what's
+                present. Every spacing decision, every typographic choice,
+                every interaction carries intent. I don't add elements —
+                I remove reasons to remove them.
+              </p>
+            </div>
+
+            <dl class="about__index reveal" aria-label="Profile facts">
+              <div class="index__row">
+                <dt class="index__term">Status</dt>
+                <dd class="index__def">Open to full-time &amp; contract</dd>
+              </div>
+              <div class="index__row">
+                <dt class="index__term">Location</dt>
+                <dd class="index__def">Hyderabad, India · Remote-first</dd>
+              </div>
+              <div class="index__row">
+                <dt class="index__term">Focus</dt>
+                <dd class="index__def">UI Engineering · Accessibility · Design Systems</dd>
+              </div>
+              <div class="index__row">
+                <dt class="index__term">Education</dt>
+                <dd class="index__def">B.Tech, Computer Science</dd>
+              </div>
+            </dl>
+
+          </div><!-- /about__body -->
+
+        </div><!-- /about__grid -->
+      </div>
+    </section>
+
+
+    <!-- ── § SKILLS ───────────────────────────────────────────── -->
+    <section id="skills" class="section skills" aria-labelledby="skills-heading">
+      <div class="container">
+
+        <div class="section__header">
+          <p class="section__kicker reveal">02 / Skills</p>
+          <h2 id="skills-heading" class="section-title reveal">
+            Tools of<br /><em>the craft.</em>
+          </h2>
+          <p class="section__sub reveal">
+            Depth over breadth — eight skills,
+            chosen deliberately.
+          </p>
+        </div>
+
+        <ul class="skills__list" role="list" aria-label="Technical skills">
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">HTML5 &amp; Semantics</h3>
+              <span class="skill-row__val" aria-hidden="true">96</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="HTML5 proficiency: 96 out of 100"
+              aria-valuenow="96"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="96"></div>
+            </div>
+          </li>
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">CSS3 / Sass / Design Systems</h3>
+              <span class="skill-row__val" aria-hidden="true">93</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="CSS3 proficiency: 93 out of 100"
+              aria-valuenow="93"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="93"></div>
+            </div>
+          </li>
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">JavaScript (ES2022+)</h3>
+              <span class="skill-row__val" aria-hidden="true">87</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="JavaScript proficiency: 87 out of 100"
+              aria-valuenow="87"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="87"></div>
+            </div>
+          </li>
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">React &amp; Component Architecture</h3>
+              <span class="skill-row__val" aria-hidden="true">82</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="React proficiency: 82 out of 100"
+              aria-valuenow="82"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="82"></div>
+            </div>
+          </li>
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">Figma &amp; UI Design</h3>
+              <span class="skill-row__val" aria-hidden="true">90</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="Figma proficiency: 90 out of 100"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="90"></div>
+            </div>
+          </li>
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">Accessibility (WCAG 2.1)</h3>
+              <span class="skill-row__val" aria-hidden="true">88</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="Accessibility proficiency: 88 out of 100"
+              aria-valuenow="88"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="88"></div>
+            </div>
+          </li>
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">Web Performance</h3>
+              <span class="skill-row__val" aria-hidden="true">79</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="Web Performance proficiency: 79 out of 100"
+              aria-valuenow="79"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="79"></div>
+            </div>
+          </li>
+
+          <li class="skill-row reveal-item">
+            <div class="skill-row__meta">
+              <h3 class="skill-row__name">Git &amp; Version Control</h3>
+              <span class="skill-row__val" aria-hidden="true">85</span>
+            </div>
+            <div
+              class="skill-bar"
+              role="progressbar"
+              aria-label="Git proficiency: 85 out of 100"
+              aria-valuenow="85"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div class="skill-bar__fill" data-w="85"></div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ── § PROJECTS ─────────────────────────────────────────── -->
+    <section id="projects" class="section projects" aria-labelledby="projects-heading">
+      <div class="container">
+
+        <div class="section__header">
+          <p class="section__kicker reveal">03 / Projects</p>
+          <h2 id="projects-heading" class="section-title reveal">
+            Selected<br /><em>work.</em>
+          </h2>
+          <p class="section__sub reveal">
+            Three projects. Each a deliberate problem solved
+            with care and principle.
+          </p>
+        </div>
+
+        <ol class="projects__list" role="list" aria-label="Featured projects">
+
+          <!-- Project 01 -->
+          <li class="project reveal-item" aria-labelledby="p1-title">
+            <article class="project__card">
+              <header class="project__head">
+                <span class="project__num" aria-hidden="true">01</span>
+                <nav class="project__links" aria-label="Links for Design Tokens project">
+                  <a
+                    class="project__link-icon"
+                    href="https://github.com/julie/design-tokens"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Design Tokens — GitHub (opens new tab)"
+                  >
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                    </svg>
+                  </a>
+                  <a
+                    class="project__link-icon"
+                    href="https://design-tokens.julie.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Design Tokens — Live site (opens new tab)"
+                  >
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                </nav>
+              </header>
+              <h3 id="p1-title" class="project__title">Design Tokens System</h3>
+              <p class="project__desc">
+                A fully documented token architecture for a product team of twelve — colors,
+                spacing, type scales, and motion values stored as structured JSON and generated
+                into platform-specific outputs. Adopted across three products in its first month.
+              </p>
+              <ul class="project__stack" role="list" aria-label="Technologies">
+                <li class="stack-tag">CSS Custom Properties</li>
+                <li class="stack-tag">Style Dictionary</li>
+                <li class="stack-tag">Storybook</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- Project 02 -->
+          <li class="project reveal-item" aria-labelledby="p2-title">
+            <article class="project__card">
+              <header class="project__head">
+                <span class="project__num" aria-hidden="true">02</span>
+                <nav class="project__links" aria-label="Links for Reading Interface project">
+                  <a
+                    class="project__link-icon"
+                    href="https://github.com/julie/reading-ui"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Reading Interface — GitHub (opens new tab)"
+                  >
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                    </svg>
+                  </a>
+                  <a
+                    class="project__link-icon"
+                    href="https://reading.julie.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Reading Interface — Live site (opens new tab)"
+                  >
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                </nav>
+              </header>
+              <h3 id="p2-title" class="project__title">Long-Form Reading Interface</h3>
+              <p class="project__desc">
+                A distraction-free reading environment built around typographic first principles —
+                optimal line lengths, fluid font scaling, zero-distraction mode, and reading
+                progress that respects <code>prefers-reduced-motion</code>.
+              </p>
+              <ul class="project__stack" role="list" aria-label="Technologies">
+                <li class="stack-tag">React</li>
+                <li class="stack-tag">Variable Fonts</li>
+                <li class="stack-tag">CSS Clamp</li>
+              </ul>
+            </article>
+          </li>
+
+          <!-- Project 03 -->
+          <li class="project reveal-item" aria-labelledby="p3-title">
+            <article class="project__card">
+              <header class="project__head">
+                <span class="project__num" aria-hidden="true">03</span>
+                <nav class="project__links" aria-label="Links for Accessible Forms project">
+                  <a
+                    class="project__link-icon"
+                    href="https://github.com/julie/accessible-forms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Accessible Forms — GitHub (opens new tab)"
+                  >
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                    </svg>
+                  </a>
+                  <a
+                    class="project__link-icon"
+                    href="https://forms.julie.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Accessible Forms — Live site (opens new tab)"
+                  >
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                </nav>
+              </header>
+              <h3 id="p3-title" class="project__title">Accessible Form Patterns</h3>
+              <p class="project__desc">
+                An open-source collection of WCAG 2.1 AA-compliant form patterns with screen
+                reader testing notes, keyboard navigation documentation, and error-handling
+                examples that actually communicate to users, not at them.
+              </p>
+              <ul class="project__stack" role="list" aria-label="Technologies">
+                <li class="stack-tag">HTML5</li>
+                <li class="stack-tag">ARIA</li>
+                <li class="stack-tag">Vanilla JS</li>
+              </ul>
+            </article>
+          </li>
+
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- ── § CONTACT ──────────────────────────────────────────── -->
+    <section id="contact" class="section contact" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="contact__grid">
+
+          <!-- Left: editorial heading + details -->
+          <div class="contact__lead">
+            <p class="section__kicker reveal">04 / Contact</p>
+            <h2 id="contact-heading" class="section-title reveal">
+              Start a<br /><em>conversation.</em>
+            </h2>
+            <p class="contact__note reveal">
+              I take on a small number of projects each year.
+              If what you're building deserves care, I'd like to hear about it.
+            </p>
+
+            <ul class="contact__details reveal" role="list" aria-label="Contact information">
+              <li class="contact__item">
+                <svg class="contact__item-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="18" height="14" rx="2"/>
+                  <path d="M1 6l9 6 9-6"/>
+                </svg>
+                <a class="contact__item-link" href="mailto:hello@julie.dev">hello@julie.dev</a>
+              </li>
+              <li class="contact__item">
+                <svg class="contact__item-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.5 16c-4.2 1.2-4.2-2-5.5-2.5m11.5 5v-3.2a2.8 2.8 0 00-.8-2.2c2.6-.3 5.4-1.3 5.4-5.9A4.5 4.5 0 0016.8 4a4.2 4.2 0 00-.1-2.5s-1-.3-3.4 1.3a11.4 11.4 0 00-5.8 0C5 1.2 4 1.5 4 1.5A4.2 4.2 0 003.9 4 4.5 4.5 0 002.6 7.2c0 4.5 2.7 5.6 5.4 5.9a2.8 2.8 0 00-.8 2.2V20"/>
+                </svg>
+                <a
+                  class="contact__item-link"
+                  href="https://github.com/julie"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  github.com/julie
+                  <span class="sr-only">(opens new tab)</span>
+                </a>
+              </li>
+              <li class="contact__item">
+                <svg class="contact__item-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13.3 6.7a5 5 0 015 5v5.8h-3.3v-5.8a1.7 1.7 0 00-1.7-1.7 1.7 1.7 0 00-1.7 1.7v5.8H8.3v-5.8a5 5 0 015-5z"/>
+                  <rect x="1.7" y="7.5" width="3.3" height="10"/>
+                  <circle cx="3.3" cy="3.3" r="1.7"/>
+                </svg>
+                <a
+                  class="contact__item-link"
+                  href="https://linkedin.com/in/julie"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  linkedin.com/in/julie
+                  <span class="sr-only">(opens new tab)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: form -->
+          <div class="contact__form-col">
+            <form
+              id="contact-form"
+              class="form"
+              novalidate
+              aria-label="Send Julie a message"
+            >
+
+              <div class="field">
+                <label class="field__label" for="input-name">Name</label>
+                <input
+                  id="input-name"
+                  class="field__input"
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="Your full name"
+                  required
+                  aria-required="true"
+                  aria-describedby="err-name"
+                />
+                <span id="err-name" class="field__error" role="alert" aria-live="polite" aria-atomic="true"></span>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="input-email">Email</label>
+                <input
+                  id="input-email"
+                  class="field__input"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="you@domain.com"
+                  required
+                  aria-required="true"
+                  aria-describedby="err-email"
+                />
+                <span id="err-email" class="field__error" role="alert" aria-live="polite" aria-atomic="true"></span>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="input-message">Message</label>
+                <textarea
+                  id="input-message"
+                  class="field__input field__textarea"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me what you're working on…"
+                  required
+                  aria-required="true"
+                  aria-describedby="err-message"
+                ></textarea>
+                <span id="err-message" class="field__error" role="alert" aria-live="polite" aria-atomic="true"></span>
+              </div>
+
+              <button
+                id="form-btn"
+                class="btn btn-primary btn-full"
+                type="submit"
+                aria-describedby="form-result"
+              >
+                <span class="btn__text">Send Message</span>
+                <svg class="btn__icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" y1="10" x2="17" y2="10"/>
+                  <polyline points="11 4 17 10 11 16"/>
+                </svg>
+              </button>
+
+              <div
+                id="form-result"
+                class="form__result"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+                hidden
+              >
+                <svg class="form__result-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18.3 3.3L7 14.6l-5-5"/>
+                </svg>
+                <span>Received. I'll reply within two business days.</span>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner container">
+      <p class="site-footer__copy">
+        &copy; <span id="yr"></span> Julie
+      </p>
+      <p class="site-footer__made">
+        Designed &amp; built with intent.
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
